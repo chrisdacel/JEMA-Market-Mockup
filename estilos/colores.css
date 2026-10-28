@@ -1,0 +1,619 @@
+/* ==========================================================================
+   CONFIGURACIÓN DE COLORES Y ESTILOS - JEMA MARKET S.A.S.
+   DISEÑO: MINIMALISTA, MODERNO Y ELEGANTE
+   ========================================================================== */
+
+:root {
+  /* -------------------------------------------------------------------------
+     1. COLORES DE MARCA
+     ------------------------------------------------------------------------- */
+  --color-marino-oscuro: #0A2E50;   /* Azul marino profundo y sobrio para textos y títulos */
+  --color-azul-primario: #0866B5;   /* Azul de acento principal / botones */
+  --color-azul-hover:    #064E8C;   /* Azul al pasar el cursor */
+  --color-celeste-suave: #F0F7FC;   /* Tinte azul muy sutil para fondos de acento */
+  --color-celeste-vivo:  #00A8E8;   /* Acento vivo minimalista */
+  
+  /* -------------------------------------------------------------------------
+     2. FONDOS Y NEUTROS (ENFOQUE CLEAN / BLANCO)
+     ------------------------------------------------------------------------- */
+  --fondo-pagina:        #FFFFFF;   /* Blanco puro, limpio y espacioso */
+  --fondo-tarjeta:       #FFFFFF;   /* Fondo de componentes */
+  --fondo-suave:         #F8FAFC;   /* Gris ultra claro para áreas secundarias */
+  --fondo-gris-producto: #F5F7FA;   /* Fondo limpio para destacar imágenes de producto */
+  
+  --color-texto:         #0F172A;   /* Texto principal de alto contraste */
+  --color-texto-suave:   #64748B;   /* Texto secundario y descriptivo */
+  --color-texto-mutado:  #94A3B8;   /* Fechas, SKU y elementos muy secundarios */
+  
+  --color-borde:         #E2E8F0;   /* Bordes nítidos y finos */
+  --color-borde-fino:    #EDF2F7;   /* Divisores casi imperceptibles */
+
+  /* -------------------------------------------------------------------------
+     3. ESTADOS Y ACCIONES
+     ------------------------------------------------------------------------- */
+  --color-exito:         #059669;   /* Verde esmeralda fino */
+  --color-exito-fondo:   #ECFDF5;
+  --color-alerta:        #D97706;   /* Ámbar suave */
+  --color-alerta-fondo:  #FFFBEB;
+  --color-peligro:       #E11D48;   /* Rojo refinado */
+  --color-whatsapp:      #25D366;
+
+  /* -------------------------------------------------------------------------
+     4. TIPOGRAFÍA Y MEDIDAS MINIMALISTAS
+     ------------------------------------------------------------------------- */
+  --fuente-principal:    'Albert Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radio-esquinas:      6px;       /* Bordes ligeramente redondeados, muy modernos */
+  --radio-pildora:       999px;     /* Cápsulas y botones redondeados */
+  --sombra-subtil:       0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --sombra-hover:        0 10px 25px -5px rgba(10, 46, 80, 0.08);
+}
+
+/* ==========================================================================
+   RESET Y BASE
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--fondo-pagina);
+  color: var(--color-texto);
+  line-height: 1.6;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   BARRA ANUNCIO MINIMALISTA
+   ========================================================================== */
+.barra-anuncio {
+  background-color: var(--fondo-suave);
+  color: var(--color-texto-suave);
+  border-bottom: 1px solid var(--color-borde);
+  text-align: center;
+  font-size: 12.5px;
+  padding: 8px 16px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.barra-anuncio strong {
+  color: var(--color-marino-oscuro);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   CABECERA MINIMALISTA (CLEAN & SLIM)
+   ========================================================================== */
+.cabecera {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--color-borde);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cabecera-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 24px;
+}
+
+.marca-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.marca-logo img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.marca-texto {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.marca-titulo {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: var(--color-marino-oscuro);
+}
+
+.marca-subtitulo {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-texto-suave);
+  letter-spacing: 1.8px;
+}
+
+/* Menú en la cabecera integrado */
+.menu-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.menu-nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-texto-suave);
+  transition: color 0.15s;
+}
+
+.menu-nav-links a:hover,
+.menu-nav-links a.activo {
+  color: var(--color-azul-primario);
+}
+
+/* Acciones en la cabecera */
+.cabecera-acciones {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.enlace-accion {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--color-texto-suave);
+  transition: color 0.15s;
+}
+
+.enlace-accion:hover {
+  color: var(--color-texto);
+}
+
+.carrito-pildora {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radio-pildora);
+  border: 1px solid var(--color-borde);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-marino-oscuro);
+  transition: all 0.2s;
+}
+
+.carrito-pildora:hover {
+  border-color: var(--color-azul-primario);
+  color: var(--color-azul-primario);
+}
+
+.carrito-contador {
+  background-color: var(--color-marino-oscuro);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: var(--radio-pildora);
+}
+
+/* ==========================================================================
+   BOTONES MINIMALISTAS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: var(--radio-pildora);
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.btn-principal {
+  background-color: var(--color-marino-oscuro);
+  color: #FFFFFF;
+}
+
+.btn-principal:hover {
+  background-color: var(--color-azul-primario);
+}
+
+.btn-borde {
+  background-color: transparent;
+  color: var(--color-marino-oscuro);
+  border-color: var(--color-borde);
+}
+
+.btn-borde:hover {
+  border-color: var(--color-marino-oscuro);
+}
+
+.btn-contraentrega {
+  background-color: var(--color-exito);
+  color: #FFFFFF;
+}
+
+.btn-contraentrega:hover {
+  background-color: #047857;
+}
+
+.btn-bloque {
+  width: 100%;
+}
+
+/* ==========================================================================
+   HERO BANNER MINIMALISTA (LIMPIO, ELEGANTE)
+   ========================================================================== */
+.hero-minimal {
+  padding: 60px 0 50px;
+  background-color: var(--fondo-suave);
+  border-bottom: 1px solid var(--color-borde-fino);
+}
+
+.hero-minimal-contenido {
+  max-width: 780px;
+}
+
+.insignia-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radio-pildora);
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-borde);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-texto-suave);
+  margin-bottom: 20px;
+}
+
+.hero-titulo {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: var(--color-marino-oscuro);
+  margin-bottom: 16px;
+}
+
+.hero-subtitulo {
+  font-size: 17px;
+  color: var(--color-texto-suave);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.hero-botones {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Tarjetas rápidas de valor */
+.barra-caracteristicas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid var(--color-borde);
+}
+
+.caracteristica-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.caracteristica-item h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-marino-oscuro);
+}
+
+.caracteristica-item p {
+  font-size: 13px;
+  color: var(--color-texto-suave);
+}
+
+/* ==========================================================================
+   TARJETAS DE PRODUCTOS (MINIMALISTAS Y NÍTIDAS)
+   ========================================================================== */
+.seccion-titulo-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.titulo-seccion {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-marino-oscuro);
+  letter-spacing: -0.3px;
+}
+
+.rejilla-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.tarjeta-producto {
+  background: var(--fondo-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-esquinas);
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-producto:hover {
+  border-color: #CBD5E1;
+  box-shadow: var(--sombra-hover);
+}
+
+.producto-caja-img {
+  background-color: var(--fondo-gris-producto);
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 16px;
+}
+
+.badge-min {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radio-pildora);
+  background: #FFFFFF;
+  border: 1px solid var(--color-borde);
+  color: var(--color-marino-oscuro);
+}
+
+.badge-contraentrega {
+  color: var(--color-exito);
+  border-color: #A7F3D0;
+  background-color: var(--color-exito-fondo);
+}
+
+.producto-cuerpo {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.producto-marca {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: var(--color-texto-mutado);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.producto-nombre {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-marino-oscuro);
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.producto-detalle-corto {
+  font-size: 12.5px;
+  color: var(--color-texto-suave);
+  margin-bottom: 14px;
+}
+
+.producto-precio-fila {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: auto;
+  margin-bottom: 14px;
+}
+
+.precio-actual {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-marino-oscuro);
+}
+
+.precio-anterior {
+  font-size: 13px;
+  color: var(--color-texto-mutado);
+  text-decoration: line-through;
+}
+
+/* ==========================================================================
+   INSIGNIAS / BADGES MINIMALISTAS
+   ========================================================================== */
+.insignia {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: var(--radio-pildora);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.insignia-pendiente {
+  background-color: var(--color-alerta-fondo);
+  color: var(--color-alerta);
+  border: 1px solid #FDE68A;
+}
+
+.insignia-confirmado {
+  background-color: var(--color-celeste-suave);
+  color: var(--color-azul-primario);
+  border: 1px solid #BAE6FD;
+}
+
+.insignia-entregado {
+  background-color: var(--color-exito-fondo);
+  color: var(--color-exito);
+  border: 1px solid #A7F3D0;
+}
+
+/* ==========================================================================
+   TABLAS Y FORMULARIOS CLEAN
+   ========================================================================== */
+.formulario-grupo {
+  margin-bottom: 16px;
+}
+
+.formulario-etiqueta {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-marino-oscuro);
+  margin-bottom: 5px;
+}
+
+.formulario-control {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radio-esquinas);
+  border: 1px solid var(--color-borde);
+  background-color: #FFFFFF;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.15s;
+}
+
+.formulario-control:focus {
+  border-color: var(--color-marino-oscuro);
+}
+
+.tabla-responsiva {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-responsiva th,
+.tabla-responsiva td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-borde);
+  font-size: 13.5px;
+}
+
+.tabla-responsiva th {
+  background-color: var(--fondo-suave);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA MINIMALISTA
+   ========================================================================== */
+.pie-pagina {
+  border-top: 1px solid var(--color-borde);
+  padding: 50px 0 30px;
+  background-color: #FFFFFF;
+  margin-top: 70px;
+  font-size: 13.5px;
+  color: var(--color-texto-suave);
+}
+
+.rejilla-pie {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.columna-pie h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-marino-oscuro);
+  margin-bottom: 14px;
+}
+
+.columna-pie ul {
+  list-style: none;
+}
+
+.columna-pie ul li {
+  margin-bottom: 8px;
+}
+
+.columna-pie a:hover {
+  color: var(--color-marino-oscuro);
+}
+
+.pie-franja-final {
+  border-top: 1px solid var(--color-borde-fino);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--color-texto-mutado);
+}
+
+/* WhatsApp minimal */
+.boton-whatsapp-flotante {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-whatsapp);
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  font-size: 24px;
+  z-index: 99;
+}
+
+@media (max-width: 850px) {
+  .hero-titulo { font-size: 32px; }
+  .barra-caracteristicas { grid-template-columns: 1fr; }
+  .rejilla-pie { grid-template-columns: 1fr 1fr; }
+  .menu-nav-links { display: none; }
+}

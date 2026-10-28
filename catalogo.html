@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Completo de Suplementos | JEMA Market S.A.S.</title>
+  <link rel="stylesheet" href="estilos/colores.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .catalogo-rejilla {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 30px;
+      margin-top: 25px;
+    }
+    .filtros-lateral {
+      background: #FFFFFF;
+      border: 1px solid var(--color-borde);
+      border-radius: var(--radio-esquinas);
+      padding: 20px;
+      height: fit-content;
+      box-shadow: var(--sombra-suave);
+    }
+    .filtro-bloque {
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--color-borde);
+      padding-bottom: 15px;
+    }
+    .filtro-bloque:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .filtro-titulo {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--color-marino-oscuro);
+      margin-bottom: 10px;
+    }
+    .filtro-opcion {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      color: var(--color-texto-suave);
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+    @media (max-width: 850px) {
+      .catalogo-rejilla { grid-template-columns: 1fr; }
+      .filtros-lateral { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra anuncio -->
+  <div class="barra-anuncio">
+    🚚 ¡Envíos a toda Colombia! <span>PAGO CONTRA ENTREGA DISPONIBLE</span>
+  </div>
+
+  <!-- Cabecera -->
+  <header class="cabecera">
+    <div class="contenedor cabecera-principal">
+      <a href="index.html" class="marca-logo">
+        <img src="imagenes/logo.png" alt="Logo JEMA">
+        <div class="marca-texto">
+          <span class="marca-titulo">JEMA</span>
+          <span class="marca-subtitulo">MARKET S.A.S.</span>
+        </div>
+      </a>
+
+      <div class="buscador-central">
+        <span class="buscador-icono">🔍</span>
+        <input type="text" placeholder="Filtrar por nombre o marca...">
+      </div>
+
+      <div class="cabecera-acciones">
+        <a href="carrito.html" class="btn btn-principal">🛒 Carrito (2)</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor seccion-espacio">
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <div>
+        <span class="subtitulo-marca">CATÁLOGO GENERAL</span>
+        <h1 class="titulo-seccion">Todos los Suplementos Deportivos</h1>
+      </div>
+      <div style="font-size: 13.5px; color: var(--color-texto-suave);">
+        Mostrando <strong>4 productos disponibles</strong>
+      </div>
+    </div>
+
+    <div class="catalogo-rejilla">
+      <!-- FILTROS LATERALES -->
+      <aside class="filtros-lateral">
+        <div class="filtro-bloque">
+          <h4 class="filtro-titulo">Categorías</h4>
+          <label class="filtro-opcion"><input type="checkbox" checked> Proteínas (14)</label>
+          <label class="filtro-opcion"><input type="checkbox"> Creatinas (10)</label>
+          <label class="filtro-opcion"><input type="checkbox"> Pre-Entrenos (8)</label>
+          <label class="filtro-opcion"><input type="checkbox"> Aminoácidos (6)</label>
+          <label class="filtro-opcion"><input type="checkbox"> Ganadores de Peso (5)</label>
+        </div>
+
+        <div class="filtro-bloque">
+          <h4 class="filtro-titulo">Marcas</h4>
+          <label class="filtro-opcion"><input type="checkbox"> Titan Labs</label>
+          <label class="filtro-opcion"><input type="checkbox"> Nutri-Max</label>
+          <label class="filtro-opcion"><input type="checkbox"> IronCore</label>
+          <label class="filtro-opcion"><input type="checkbox"> ProVital</label>
+        </div>
+
+        <div class="filtro-bloque">
+          <h4 class="filtro-titulo">Método de Pago</h4>
+          <label class="filtro-opcion"><input type="checkbox" checked> Acepta Contra Entrega</label>
+        </div>
+      </aside>
+
+      <!-- LISTA DE PRODUCTOS -->
+      <div>
+        <div class="rejilla-productos">
+
+          <!-- 1 -->
+          <article class="tarjeta-producto">
+            <span class="producto-etiqueta nuevo">MÁS VENDIDO</span>
+            <div class="producto-imagen-caja">
+              <svg class="producto-svg-suplemento" viewBox="0 0 100 120">
+                <rect x="25" y="8" width="50" height="14" rx="4" fill="#0A3A6A" />
+                <rect x="18" y="24" width="64" height="90" rx="8" fill="#FFFFFF" stroke="#0870C8" stroke-width="2.5" />
+                <rect x="20" y="42" width="60" height="42" fill="#063E80" />
+                <text x="50" y="60" font-size="10" font-weight="bold" fill="#17BFF5" text-anchor="middle">WHEY 100%</text>
+              </svg>
+            </div>
+            <div class="producto-cuerpo">
+              <span class="producto-marca">TITAN LABS</span>
+              <h3 class="producto-nombre">Proteína Whey Isolate 100% Pura</h3>
+              <div class="producto-estrellas">★★★★★ <span>(48)</span></div>
+              <div class="producto-precio-fila">
+                <span class="precio-actual">$189.900 COP</span>
+              </div>
+              <a href="producto-detalle.html" class="btn btn-principal btn-bloque">Ver Detalles</a>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="tarjeta-producto">
+            <span class="producto-etiqueta contraentrega">CONTRA ENTREGA</span>
+            <div class="producto-imagen-caja">
+              <svg class="producto-svg-suplemento" viewBox="0 0 100 120">
+                <rect x="28" y="8" width="44" height="14" rx="4" fill="#063E80" />
+                <rect x="22" y="24" width="56" height="85" rx="8" fill="#FFFFFF" stroke="#17BFF5" stroke-width="2.5" />
+                <rect x="24" y="45" width="52" height="38" fill="#17BFF5" />
+                <text x="50" y="62" font-size="9" font-weight="bold" fill="#041A33" text-anchor="middle">CREATINA</text>
+              </svg>
+            </div>
+            <div class="producto-cuerpo">
+              <span class="producto-marca">NUTRI-MAX</span>
+              <h3 class="producto-nombre">Creatina Monohidratada Micronizada 300g</h3>
+              <div class="producto-estrellas">★★★★★ <span>(62)</span></div>
+              <div class="producto-precio-fila">
+                <span class="precio-actual">$95.000 COP</span>
+              </div>
+              <a href="producto-detalle.html" class="btn btn-principal btn-bloque">Ver Detalles</a>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="tarjeta-producto">
+            <span class="producto-etiqueta">OFERTA</span>
+            <div class="producto-imagen-caja">
+              <svg class="producto-svg-suplemento" viewBox="0 0 100 120">
+                <rect x="26" y="8" width="48" height="14" rx="4" fill="#0A3A6A" />
+                <rect x="20" y="24" width="60" height="88" rx="8" fill="#FFFFFF" stroke="#0A3A6A" stroke-width="2.5" />
+                <rect x="22" y="44" width="56" height="40" fill="#0A3A6A" />
+                <text x="50" y="62" font-size="9" font-weight="bold" fill="#EAF6FE" text-anchor="middle">NITRO PUMP</text>
+              </svg>
+            </div>
+            <div class="producto-cuerpo">
+              <span class="producto-marca">IRONCORE</span>
+              <h3 class="producto-nombre">Pre-Entreno Nitro Pump Explosivo</h3>
+              <div class="producto-estrellas">★★★★☆ <span>(31)</span></div>
+              <div class="producto-precio-fila">
+                <span class="precio-actual">$115.000 COP</span>
+              </div>
+              <a href="producto-detalle.html" class="btn btn-principal btn-bloque">Ver Detalles</a>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="tarjeta-producto">
+            <span class="producto-etiqueta nuevo">NUEVO</span>
+            <div class="producto-imagen-caja">
+              <svg class="producto-svg-suplemento" viewBox="0 0 100 120">
+                <rect x="26" y="8" width="48" height="14" rx="4" fill="#0870C8" />
+                <rect x="20" y="24" width="60" height="88" rx="8" fill="#FFFFFF" stroke="#0870C8" stroke-width="2.5" />
+                <rect x="22" y="44" width="56" height="40" fill="#0870C8" />
+                <text x="50" y="62" font-size="9" font-weight="bold" fill="#FFFFFF" text-anchor="middle">BCAA 2:1:1</text>
+              </svg>
+            </div>
+            <div class="producto-cuerpo">
+              <span class="producto-marca">PROVITAL</span>
+              <h3 class="producto-nombre">Aminoácidos BCAA Recuperación Muscular</h3>
+              <div class="producto-estrellas">★★★★★ <span>(19)</span></div>
+              <div class="producto-precio-fila">
+                <span class="precio-actual">$82.000 COP</span>
+              </div>
+              <a href="producto-detalle.html" class="btn btn-principal btn-bloque">Ver Detalles</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie-pagina" style="padding: 25px 0;">
+    <div class="contenedor pie-franja-final" style="border: none; padding: 0;">
+      <p>© 2026 JEMA Market S.A.S. - Suplementos Deportivos.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

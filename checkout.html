@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Pedido | JEMA Market S.A.S.</title>
+  <link rel="stylesheet" href="estilos/colores.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .checkout-grid-min {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 40px;
+      margin-top: 24px;
+    }
+    .seccion-form-min {
+      border: 1px solid var(--color-borde);
+      border-radius: var(--radio-esquinas);
+      padding: 24px;
+      margin-bottom: 20px;
+      background: #FFFFFF;
+    }
+    .titulo-seccion-min {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-marino-oscuro);
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--color-borde-fino);
+      padding-bottom: 8px;
+    }
+    .tarjeta-metodo-min {
+      border: 1px solid var(--color-borde);
+      border-radius: var(--radio-esquinas);
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 12px;
+      cursor: pointer;
+      align-items: flex-start;
+    }
+    .tarjeta-metodo-min.activa {
+      border-color: var(--color-exito);
+      background-color: var(--color-exito-fondo);
+    }
+    .tarjeta-metodo-min.inactiva {
+      opacity: 0.6;
+      cursor: not-allowed;
+      background-color: var(--fondo-suave);
+    }
+    @media (max-width: 800px) {
+      .checkout-grid-min { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera-principal">
+      <a href="index.html" class="marca-logo">
+        <img src="imagenes/logo.png" alt="Logo JEMA">
+        <div class="marca-texto">
+          <span class="marca-titulo">JEMA MARKET</span>
+        </div>
+      </a>
+      <div style="font-size: 13px; font-weight: 600; color: var(--color-texto-suave);">
+        Compra Segura
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor" style="padding-top: 40px; padding-bottom: 60px;">
+    <h1 style="font-size: 24px; font-weight: 800; color: var(--color-marino-oscuro); margin-bottom: 4px;">
+      Finalizar Compra
+    </h1>
+    <p style="font-size: 13.5px; color: var(--color-texto-suave); margin-bottom: 24px;">
+      Completa tus datos para coordinar el envío de tu pedido.
+    </p>
+
+    <div class="checkout-grid-min">
+      <div>
+        <!-- 1. Contacto -->
+        <div class="seccion-form-min">
+          <div class="titulo-seccion-min">1. Datos Personales</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="formulario-grupo">
+              <label class="formulario-etiqueta">Nombres</label>
+              <input type="text" class="formulario-control" value="Carlos Andrés">
+            </div>
+            <div class="formulario-grupo">
+              <label class="formulario-etiqueta">Apellidos</label>
+              <input type="text" class="formulario-control" value="Gómez Restrepo">
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="formulario-grupo">
+              <label class="formulario-etiqueta">WhatsApp / Celular</label>
+              <input type="tel" class="formulario-control" value="314 635 5214">
+            </div>
+            <div class="formulario-grupo">
+              <label class="formulario-etiqueta">Correo Electrónico</label>
+              <input type="email" class="formulario-control" value="carlos@correo.com">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Dirección Colombia -->
+        <div class="seccion-form-min">
+          <div class="titulo-seccion-min">2. Destino de Entrega (Colombia)</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="formulario-grupo">
+              <label class="formulario-etiqueta">Departamento</label>
+              <select class="formulario-control">
+                <option selected>Risaralda</option>
+                <option>Antioquia</option>
+                <option>Bogotá D.C. / Cundinamarca</option>
+                <option>Valle del Cauca</option>
+                <option>Caldas</option>
+                <option>Quindío</option>
+              </select>
+            </div>
+            <div class="formulario-grupo">
+              <label class="formulario-etiqueta">Ciudad o Municipio</label>
+              <input type="text" class="formulario-control" value="Pereira">
+            </div>
+          </div>
+          <div class="formulario-grupo">
+            <label class="formulario-etiqueta">Dirección Completa</label>
+            <input type="text" class="formulario-control" value="Carrera 7 # 21 - 45, Apto 302">
+          </div>
+        </div>
+
+        <!-- 3. Pago -->
+        <div class="seccion-form-min">
+          <div class="titulo-seccion-min">3. Forma de Pago</div>
+
+          <!-- Contra entrega -->
+          <div class="tarjeta-metodo-min activa">
+            <input type="radio" checked id="cod_opt" style="margin-top: 3px;">
+            <label for="cod_opt" style="flex: 1; cursor: pointer;">
+              <div style="display: flex; justify-content: space-between;">
+                <strong style="font-size: 14px; color: var(--color-marino-oscuro);">Pago Contra Entrega (Recomendado)</strong>
+                <span class="insignia insignia-entregado">Habilitado</span>
+              </div>
+              <p style="font-size: 12.5px; color: var(--color-texto-suave); margin-top: 2px;">
+                Pagas en efectivo o transferencia cuando el mensajero entregue tu paquete en tu dirección.
+              </p>
+            </label>
+          </div>
+
+          <!-- Pasarela Online -->
+          <div class="tarjeta-metodo-min inactiva">
+            <input type="radio" disabled id="online_opt" style="margin-top: 3px;">
+            <label for="online_opt" style="flex: 1; cursor: not-allowed;">
+              <div style="display: flex; justify-content: space-between;">
+                <strong style="font-size: 14px; color: var(--color-texto-suave);">Pago en Línea (PSE, Tarjetas, Nequi)</strong>
+                <span class="insignia insignia-pendiente">Próximamente</span>
+              </div>
+              <p style="font-size: 12px; color: var(--color-texto-mutado); margin-top: 2px;">
+                Pendiente de permisos comerciales con la pasarela de pagos.
+              </p>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resumen Checkout -->
+      <div>
+        <div class="seccion-form-min" style="position: sticky; top: 80px;">
+          <h3 style="font-size: 16px; font-weight: 700; color: var(--color-marino-oscuro); margin-bottom: 14px;">
+            Detalle de la Orden
+          </h3>
+
+          <div style="font-size: 13px; color: var(--color-texto-suave); line-height: 1.8; border-bottom: 1px solid var(--color-borde); padding-bottom: 12px;">
+            <div>1x Whey Isolate 100% (2 Lbs): <strong>$189.900</strong></div>
+            <div>1x Creatina Micronizada (300g): <strong>$95.000</strong></div>
+          </div>
+
+          <div style="margin: 14px 0; font-size: 13.5px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+              <span>Subtotal</span>
+              <strong>$284.900</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+              <span>Envío</span>
+              <strong style="color: var(--color-exito);">$12.000</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 17px; font-weight: 800; color: var(--color-marino-oscuro); border-top: 1px solid var(--color-borde); padding-top: 12px; margin-top: 10px;">
+              <span>Total a Pagar</span>
+              <span>$296.900 COP</span>
+            </div>
+          </div>
+
+          <a href="admin.html" class="btn btn-contraentrega btn-bloque" style="padding: 13px; margin-top: 16px;">
+            Confirmar Orden Contra Entrega
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor pie-franja-final" style="border: none;">
+      © 2026 JEMA Market S.A.S. • Checkout Seguro
+    </div>
+  </footer>
+
+</body>
+</html>

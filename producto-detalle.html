@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proteína Whey Isolate 100% | JEMA Market S.A.S.</title>
+  <link rel="stylesheet" href="estilos/colores.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .detalle-grid-min {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 24px;
+    }
+    .detalle-galeria-min {
+      background-color: var(--fondo-gris-producto);
+      border: 1px solid var(--color-borde);
+      border-radius: var(--radio-esquinas);
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pills-opciones {
+      display: flex;
+      gap: 10px;
+      margin: 8px 0 20px;
+    }
+    .pill-opcion {
+      padding: 6px 14px;
+      border: 1px solid var(--color-borde);
+      border-radius: var(--radio-pildora);
+      background: #FFFFFF;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-texto);
+      cursor: pointer;
+    }
+    .pill-opcion.seleccionada {
+      border-color: var(--color-marino-oscuro);
+      background-color: var(--color-marino-oscuro);
+      color: #FFFFFF;
+    }
+    .caja-confianza-min {
+      margin-top: 30px;
+      padding: 16px;
+      background-color: var(--fondo-suave);
+      border-radius: var(--radio-esquinas);
+      border: 1px solid var(--color-borde);
+      font-size: 13px;
+      color: var(--color-texto-suave);
+      line-height: 1.6;
+    }
+    @media (max-width: 800px) {
+      .detalle-grid-min { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="barra-anuncio">
+    Envíos a toda Colombia • <strong>Pago Contra Entrega disponible</strong>
+  </div>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera-principal">
+      <a href="index.html" class="marca-logo">
+        <img src="imagenes/logo.png" alt="Logo JEMA Market">
+        <div class="marca-texto">
+          <span class="marca-titulo">JEMA MARKET</span>
+        </div>
+      </a>
+      <div class="cabecera-acciones">
+        <a href="index.html" class="enlace-accion">← Volver</a>
+        <a href="carrito.html" class="carrito-pildora">
+          <span>Carrito</span>
+          <span class="carrito-contador">2</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor" style="padding-top: 40px; padding-bottom: 60px;">
+    <div style="font-size: 13px; color: var(--color-texto-mutado); margin-bottom: 15px;">
+      <a href="index.html">Inicio</a> / <a href="catalogo.html">Proteínas</a> / <span style="color: var(--color-texto);">Whey Isolate</span>
+    </div>
+
+    <div class="detalle-grid-min">
+      <div class="detalle-galeria-min">
+        <svg style="width: 220px; height: 280px;" viewBox="0 0 100 120">
+          <rect x="28" y="10" width="44" height="12" rx="3" fill="#0A2E50" />
+          <rect x="22" y="22" width="56" height="88" rx="6" fill="#FFFFFF" stroke="#0A2E50" stroke-width="1.5" />
+          <rect x="24" y="44" width="52" height="34" fill="#0A2E50" />
+          <text x="50" y="62" font-size="9" font-weight="bold" fill="#00A8E8" text-anchor="middle">WHEY 100%</text>
+          <text x="50" y="72" font-size="6.5" fill="#FFFFFF" text-anchor="middle">ISOLATE</text>
+        </svg>
+      </div>
+
+      <div>
+        <span class="badge-min badge-contraentrega" style="position: static; margin-bottom: 12px; display: inline-block;">
+          Acepta Pago Contra Entrega
+        </span>
+        <div style="font-size: 12px; font-weight: 700; color: var(--color-texto-mutado); text-transform: uppercase;">
+          Titan Labs
+        </div>
+        <h1 style="font-size: 30px; font-weight: 800; color: var(--color-marino-oscuro); margin: 4px 0 12px; line-height: 1.2;">
+          Proteína Whey Isolate 100% Aislada
+        </h1>
+
+        <div class="producto-precio-fila" style="margin-bottom: 20px;">
+          <span class="precio-actual" style="font-size: 26px;">$189.900 COP</span>
+          <span class="precio-anterior" style="font-size: 16px;">$219.000</span>
+          <span class="insignia insignia-confirmado">-13% OFF</span>
+        </div>
+
+        <p style="font-size: 14px; color: var(--color-texto-suave); line-height: 1.6; margin-bottom: 24px;">
+          Fórmula de proteína de suero aislada ultra-filtrada de alta pureza. Aporta 25 gramos de proteína de rápida asimilación por servicio con mínimo contenido de grasas y azúcares.
+        </p>
+
+        <!-- Sabor -->
+        <div>
+          <label class="formulario-etiqueta">Sabor:</label>
+          <div class="pills-opciones">
+            <button class="pill-opcion seleccionada">Chocolate Suizo</button>
+            <button class="pill-opcion">Vainilla</button>
+            <button class="pill-opcion">Fresa</button>
+          </div>
+        </div>
+
+        <!-- Tamaño -->
+        <div>
+          <label class="formulario-etiqueta">Presentación:</label>
+          <div class="pills-opciones">
+            <button class="pill-opcion seleccionada">2 Libras</button>
+            <button class="pill-opcion">5 Libras</button>
+          </div>
+        </div>
+
+        <!-- Botones -->
+        <div style="display: flex; gap: 12px; margin-top: 28px;">
+          <a href="carrito.html" class="btn btn-principal" style="flex: 1; padding: 13px;">
+            Agregar al Carrito
+          </a>
+          <a href="checkout.html" class="btn btn-contraentrega" style="flex: 1; padding: 13px;">
+            Comprar Contra Entrega
+          </a>
+        </div>
+
+        <div class="caja-confianza-min">
+          <strong>Garantía de Compra JEMA Market:</strong><br>
+          • Registro Sanitario INVIMA oficial.<br>
+          • Paga en efectivo o transferencia únicamente al recibir el paquete en tu dirección.<br>
+          • Envíos rápidos y coordinados directamente por WhatsApp.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor pie-franja-final" style="border: none;">
+      © 2026 JEMA Market S.A.S. • Nutrición Deportiva
+    </div>
+  </footer>
+
+</body>
+</html>

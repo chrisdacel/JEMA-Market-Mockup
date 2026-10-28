@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Control | JEMA Market S.A.S.</title>
+  <link rel="stylesheet" href="estilos/colores.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .admin-layout-min {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      min-height: 100vh;
+    }
+    .admin-sidebar-min {
+      border-right: 1px solid var(--color-borde);
+      background: #FFFFFF;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+    }
+    .admin-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: var(--radio-esquinas);
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--color-texto-suave);
+      margin-bottom: 4px;
+      transition: all 0.15s;
+    }
+    .admin-nav-item:hover,
+    .admin-nav-item.activo {
+      background-color: var(--fondo-suave);
+      color: var(--color-marino-oscuro);
+      font-weight: 600;
+    }
+    .admin-main-min {
+      padding: 32px 40px;
+      background-color: var(--fondo-suave);
+    }
+    .kpi-row-min {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .kpi-card-min {
+      background: #FFFFFF;
+      border: 1px solid var(--color-borde);
+      border-radius: var(--radio-esquinas);
+      padding: 18px;
+    }
+    .kpi-card-min .valor {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--color-marino-oscuro);
+      margin: 4px 0 2px;
+    }
+    @media (max-width: 850px) {
+      .admin-layout-min { grid-template-columns: 1fr; }
+      .admin-sidebar-min { display: none; }
+      .admin-main-min { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="admin-layout-min">
+    <!-- Sidebar Clean -->
+    <aside class="admin-sidebar-min">
+      <div class="marca-logo" style="margin-bottom: 24px;">
+        <img src="imagenes/logo.png" alt="Logo JEMA" style="height: 32px;">
+        <div class="marca-texto">
+          <span class="marca-titulo" style="font-size: 15px;">JEMA ADMIN</span>
+        </div>
+      </div>
+
+      <div style="font-size: 11px; font-weight: 700; color: var(--color-texto-mutado); text-transform: uppercase; margin-bottom: 8px; padding-left: 12px;">
+        Módulos
+      </div>
+      <a href="admin.html" class="admin-nav-item activo">📊 Tablero</a>
+      <a href="admin.html" class="admin-nav-item">📦 Pedidos</a>
+      <a href="admin.html" class="admin-nav-item">🏷️ Productos</a>
+      <a href="admin.html" class="admin-nav-item">📂 Categorías</a>
+      <a href="admin.html" class="admin-nav-item">👥 Usuarios / Roles</a>
+      <a href="admin.html" class="admin-nav-item">💳 Pagos</a>
+
+      <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--color-borde-fino);">
+        <div style="font-size: 12px; color: var(--color-texto-suave); margin-bottom: 6px;">
+          Sesión: <strong>Admin General</strong>
+        </div>
+        <a href="index.html" style="font-size: 12.5px; color: var(--color-azul-primario); font-weight: 600;">← Ir a la Tienda</a>
+      </div>
+    </aside>
+
+    <!-- Main Admin -->
+    <main class="admin-main-min">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <div>
+          <h1 style="font-size: 22px; font-weight: 800; color: var(--color-marino-oscuro);">Panel General</h1>
+          <p style="font-size: 13px; color: var(--color-texto-suave);">Supervisión de pedidos contra entrega e inventario</p>
+        </div>
+      </div>
+
+      <!-- KPIs -->
+      <div class="kpi-row-min">
+        <div class="kpi-card-min">
+          <div style="font-size: 12px; color: var(--color-texto-suave); font-weight: 600;">Contra Entrega por Confirmar</div>
+          <div class="valor" style="color: var(--color-alerta);">6</div>
+          <span class="insignia insignia-pendiente">Atención requerida</span>
+        </div>
+        <div class="kpi-card-min">
+          <div style="font-size: 12px; color: var(--color-texto-suave); font-weight: 600;">Ventas del Mes</div>
+          <div class="valor">$12.450.000</div>
+          <span style="font-size: 12px; color: var(--color-exito);">+18% este mes</span>
+        </div>
+        <div class="kpi-card-min">
+          <div style="font-size: 12px; color: var(--color-texto-suave); font-weight: 600;">Catálogo Activo</div>
+          <div class="valor">48</div>
+          <span style="font-size: 12px; color: var(--color-texto-suave);">Suplementos</span>
+        </div>
+        <div class="kpi-card-min">
+          <div style="font-size: 12px; color: var(--color-texto-suave); font-weight: 600;">Stock Bajo</div>
+          <div class="valor" style="color: var(--color-peligro);">3</div>
+          <span style="font-size: 12px; color: var(--color-peligro);">Reponer</span>
+        </div>
+      </div>
+
+      <!-- Tabla Minimalista -->
+      <div style="background: #FFFFFF; border: 1px solid var(--color-borde); border-radius: var(--radio-esquinas); overflow: hidden;">
+        <div style="padding: 16px 20px; border-bottom: 1px solid var(--color-borde); font-weight: 700; font-size: 14.5px; color: var(--color-marino-oscuro);">
+          Pedidos Recientes
+        </div>
+        <table class="tabla-responsiva">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Cliente</th>
+              <th>Ciudad</th>
+              <th>Total</th>
+              <th>Método</th>
+              <th>Estado</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>#JM-1048</strong></td>
+              <td>Carlos Gómez</td>
+              <td>Pereira</td>
+              <td><strong>$296.900</strong></td>
+              <td><span class="insignia insignia-pendiente">Contra Entrega</span></td>
+              <td><span class="insignia insignia-pendiente">Por Confirmar</span></td>
+              <td><a href="https://wa.me/573146355214" target="_blank" class="btn btn-borde" style="padding: 4px 10px; font-size: 11.5px;">WhatsApp</a></td>
+            </tr>
+            <tr>
+              <td><strong>#JM-1047</strong></td>
+              <td>Mariana Morales</td>
+              <td>Bogotá D.C.</td>
+              <td><strong>$189.900</strong></td>
+              <td><span class="insignia insignia-confirmado">En Línea</span></td>
+              <td><span class="insignia insignia-confirmado">En Preparación</span></td>
+              <td><button class="btn btn-borde" style="padding: 4px 10px; font-size: 11.5px;">Guía</button></td>
+            </tr>
+            <tr>
+              <td><strong>#JM-1046</strong></td>
+              <td>Juan David Osorio</td>
+              <td>Medellín</td>
+              <td><strong>$95.000</strong></td>
+              <td><span class="insignia insignia-pendiente">Contra Entrega</span></td>
+              <td><span class="insignia insignia-confirmado">En Ruta</span></td>
+              <td><button class="btn btn-borde" style="padding: 4px 10px; font-size: 11.5px;">Rastrear</button></td>
+            </tr>
+            <tr>
+              <td><strong>#JM-1045</strong></td>
+              <td>Laura Rincón</td>
+              <td>Manizales</td>
+              <td><strong>$210.000</strong></td>
+              <td><span class="insignia insignia-pendiente">Contra Entrega</span></td>
+              <td><span class="insignia insignia-entregado">Entregado</span></td>
+              <td><span style="font-size: 12px; color: var(--color-exito);">Completado</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

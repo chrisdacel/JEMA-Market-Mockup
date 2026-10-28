@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras | JEMA Market S.A.S.</title>
+  <link rel="stylesheet" href="estilos/colores.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .carrito-grid-min {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr;
+      gap: 36px;
+      margin-top: 24px;
+    }
+    .linea-item-min {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--color-borde);
+    }
+    .min-img-thumb {
+      width: 64px;
+      height: 64px;
+      background-color: var(--fondo-gris-producto);
+      border-radius: var(--radio-esquinas);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .caja-resumen-min {
+      border: 1px solid var(--color-borde);
+      border-radius: var(--radio-esquinas);
+      padding: 24px;
+      background: #FFFFFF;
+      height: fit-content;
+    }
+    @media (max-width: 800px) {
+      .carrito-grid-min { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera-principal">
+      <a href="index.html" class="marca-logo">
+        <img src="imagenes/logo.png" alt="Logo JEMA">
+        <div class="marca-texto">
+          <span class="marca-titulo">JEMA MARKET</span>
+        </div>
+      </a>
+      <a href="index.html" class="enlace-accion">← Continuar Comprando</a>
+    </div>
+  </header>
+
+  <main class="contenedor" style="padding-top: 40px; padding-bottom: 60px;">
+    <h1 style="font-size: 24px; font-weight: 800; color: var(--color-marino-oscuro);">
+      Bolsa de Compras (2 Productos)
+    </h1>
+
+    <div class="carrito-grid-min">
+      <!-- Lista limpia de items -->
+      <div>
+        <div class="linea-item-min">
+          <div class="min-img-thumb">
+            <svg style="width: 36px; height: 44px;" viewBox="0 0 100 120">
+              <rect x="28" y="10" width="44" height="12" rx="3" fill="#0A2E50" />
+              <rect x="22" y="22" width="56" height="88" rx="6" fill="#FFFFFF" stroke="#0A2E50" stroke-width="1.5" />
+              <rect x="24" y="44" width="52" height="34" fill="#0A2E50" />
+            </svg>
+          </div>
+          <div style="flex: 1;">
+            <div style="font-size: 11px; font-weight: 700; color: var(--color-texto-mutado); text-transform: uppercase;">Titan Labs</div>
+            <h4 style="font-size: 14.5px; font-weight: 700; color: var(--color-marino-oscuro);">Proteína Whey Isolate 100%</h4>
+            <div style="font-size: 12.5px; color: var(--color-texto-suave);">Chocolate Suizo • 2 Lbs</div>
+          </div>
+          <div style="font-weight: 700; font-size: 14.5px;">1x $189.900</div>
+          <button style="border: none; background: none; color: var(--color-texto-mutado); cursor: pointer; padding: 6px;" title="Eliminar">✕</button>
+        </div>
+
+        <div class="linea-item-min">
+          <div class="min-img-thumb">
+            <svg style="width: 36px; height: 44px;" viewBox="0 0 100 120">
+              <rect x="30" y="10" width="40" height="12" rx="3" fill="#0A2E50" />
+              <rect x="24" y="22" width="52" height="84" rx="6" fill="#FFFFFF" stroke="#0866B5" stroke-width="1.5" />
+              <rect x="26" y="44" width="48" height="32" fill="#0866B5" />
+            </svg>
+          </div>
+          <div style="flex: 1;">
+            <div style="font-size: 11px; font-weight: 700; color: var(--color-texto-mutado); text-transform: uppercase;">Nutri-Max</div>
+            <h4 style="font-size: 14.5px; font-weight: 700; color: var(--color-marino-oscuro);">Creatina Monohidratada Micronizada</h4>
+            <div style="font-size: 12.5px; color: var(--color-texto-suave);">300g • Sin Sabor</div>
+          </div>
+          <div style="font-weight: 700; font-size: 14.5px;">1x $95.000</div>
+          <button style="border: none; background: none; color: var(--color-texto-mutado); cursor: pointer; padding: 6px;" title="Eliminar">✕</button>
+        </div>
+      </div>
+
+      <!-- Resumen Minimalista -->
+      <div class="caja-resumen-min">
+        <h3 style="font-size: 16px; font-weight: 700; color: var(--color-marino-oscuro); margin-bottom: 16px;">
+          Resumen
+        </h3>
+        <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 10px; color: var(--color-texto-suave);">
+          <span>Subtotal</span>
+          <span style="font-weight: 600; color: var(--color-texto);">$284.900 COP</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 10px; color: var(--color-texto-suave);">
+          <span>Opción Contra Entrega</span>
+          <span style="color: var(--color-exito); font-weight: 600;">Disponible</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 17px; font-weight: 800; color: var(--color-marino-oscuro); border-top: 1px solid var(--color-borde); padding-top: 14px; margin-top: 14px;">
+          <span>Total Estimado</span>
+          <span>$284.900 COP</span>
+        </div>
+
+        <a href="checkout.html" class="btn btn-principal btn-bloque" style="margin-top: 20px; padding: 12px;">
+          Proceder al Checkout →
+        </a>
+
+        <div style="text-align: center; font-size: 12px; color: var(--color-texto-mutado); margin-top: 14px;">
+          Envíos seguros a toda Colombia
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor pie-franja-final" style="border: none;">
+      © 2026 JEMA Market S.A.S. • Carrito de Compra
+    </div>
+  </footer>
+
+</body>
+</html>
